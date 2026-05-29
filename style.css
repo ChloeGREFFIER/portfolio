@@ -178,8 +178,26 @@ h2 {
   margin-right: 8px;
 }
 
+
 /* PROJETS */
 .project-details {
+  display: none;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.toggle-arrow {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #ff4da6;
+  transition: transform .3s;
+}
+
+/* PROJETS PERSO*/
+.project-perso {
   display: none;
   margin-top: 10px;
   font-size: 14px;
