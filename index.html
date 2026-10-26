@@ -1,295 +1,509 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio - Chloé Greffier</title>
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/png" href="logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Chloé Greffier</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="logo.png">
 </head>
-
 
 <body>
 
-	<nav>
-	<img src="logo.png">
-	<div class="nav-links">
-	<a href="#accueil">Accueil</a>
-	<a href="#formation">Formation</a>
-	<a href="#competences">Compétences</a>
-	<a href="#projets">Projets</a>
-	<a href="#photos">Activitées</a>
-	<a href="#qualites">Soft Skills</a>
-	<a href="#contact">Contact</a>
-	</div>
-	</nav>
+  <!-- NAVIGATION -->
+  <nav>
+    <img src="logo.png" alt="Logo">
 
-	<header id="accueil">
-	<div class="header-text">
-	<h1><a style="color:#4da6ff;" href="#contact">CHLOÉ GREFFIER</a></h1>
-	<p>Etudiante a l'IUT d'orsay - Universite Paris-Saclay <br>Recherche un stage : J'aime apprendre, résoudre des problèmes et développer mes compétences.</p>
-	</div>
-	<img src="photo.png" class="profile-pic">
-	</header>
+    <div class="nav-links">
+      <a href="#accueil" data-en="Home">Accueil</a>
+      <a href="#formation" data-en="Education">Formation</a>
+      <a href="#competences" data-en="Skills">Compétences</a>
+      <a href="#projets" data-en="Projects">Projets</a>
+      <a href="#photos" data-en="Activities">Activitées</a>
+      <a href="#qualites" data-en="Soft Skills">Soft Skills</a>
+      <a href="#contact" data-en="Contact">Contact</a>
+    </div>
 
-	<section id="formation">
-	<h2>Formation</h2>
-	<div class="grid">
-	<div class="card">
-	<p><b>BUT Informatique – IUT d’Orsay</b><br>Depuis septembre 2025<br><b>Parcours : </b> Réalisation d'Applications (conception, architecture, développement, tests et déploiement) </p>
-	</div>
-	<div class="card">
-	<p><b>Baccalauréat général – Lycée de la Vallée de Chevreuse</b><br>2022 - 2025<br>Mention Bien<br><b>Spécialités :</b> Mathématiques et NSI</p>
-	</div>
-	</div>
-	</section>
+    <!-- LANGUAGE SWITCH -->
+    <button
+      id="language-switch"
+      class="language-switch"
+      type="button"
+      aria-label="Change language"
+      aria-pressed="false"
+    >
+      <span class="lang-option active" id="lang-fr">FR</span>
+      <span class="lang-option" id="lang-en">EN</span>
+    </button>
+  </nav>
 
-	<section id="competences">
-	<h2>Compétences</h2>
-	<div class="grid">
-	<div class="card"><h3>Web</h3><ul class="skill">
-	<li>HTML ★★★★★</li>
-	<li>CSS ★★★★★</li>
-	<li>JavaScript ★☆☆☆☆</li>
-	<li>PHP ★★★★☆</li>
-	</ul></div>
-	<div class="card"><h3>Langages</h3><ul class="skill">
-	<li>Python (pygame, pyxel) ★★★★★</li>
-	<li>C++ ★★★★★</li>
-	<li>C# ★★★★☆</li>
-	<li>C ★★★★★</li>
-	<li>Java (swing) ★★★★★</li>
-	<li>Godot ★★☆☆☆</li>
-	</ul></div>
-	<div class="card"><h3>Base de données</h3><ul class="skill">
-	<li>MySQL ★★★★★</li>
-	<li>Oracle ★★★★★</li>
-	</ul></div>
-	<div class="card"><h3>Outils</h3><ul class="skill">
-	<li>Linux ★★★☆☆</li>
-	<li>Git ★★★★★</li>
-	</ul></div>
-	</div>
-	</section>
-	<section id="projets">
-	<h2>Projets dans le cadre du lycée ou de l'IUT</h2>
-	<div class="grid">
+  <!-- HEADER -->
+  <header id="accueil">
+    <div class="header-text">
+      <h1>
+        <a style="color:#4da6ff;" href="#contact">CHLOÉ GREFFIER</a>
+      </h1>
 
-	<!-- Carte 1 -->
-	<div class="card">
-	  <h3><a style="color:#000000;" href="https://github.com/ChloeGREFFIER/CheapKiriTourism">Site agence de voyage</a></h3>
-	  <p>Projet en groupe de 3 : création d’une agence fictive puis développement du site web.</p>
-	  <div class="toggle-arrow" onclick="toggleProject('p1')">▼</div>
-	  <div id="p1" class="project-details">
-		<p>Explication projet Site agence de voyage : réalisation complète du front-end, intégration responsive, gestion des pages et contenus dynamiques.</p>
-		<div class="tag">HTML, CSS</div>
-	  </div>
-	</div>
+      <p data-en="Computer Science student at IUT d'Orsay - Université Paris-Saclay">
+        Etudiante a l'IUT d'orsay - Universite Paris-Saclay
+      </p>
 
-	<!-- Carte 2 -->
-	<div class="card">
-	  <h3>Jeu enfant</h3>
-	  <p>Jeu de calcul mental sur le thème de la mer en groupe de 3.</p>
-	  <div class="toggle-arrow" onclick="toggleProject('p2')">▼</div>
-	  <div id="p2" class="project-details">
-		<p>Explication projet Jeu enfant : développement du jeu avec interface ludique, gestion des scores, timers et animations simples pour l’apprentissage des mathématiques.</p>
-		<div class="tag">HTML, CSS, JS</div>
-	  </div>
-	</div>
+      <p data-en="Looking for an internship: I enjoy learning, solving problems and developing my skills.">
+        Recherche un stage : J'aime apprendre, résoudre des problèmes et développer mes compétences.
+      </p>
+    </div>
 
-	<!-- Carte 4 -->
-	<div class="card">
-	  <h3>Space Invaders</h3>
-	  <p>Recréation du jeu en groupe de 2.</p>
-	  <div class="toggle-arrow" onclick="toggleProject('p4')">▼</div>
-	  <div id="p4" class="project-details">
-		<p>Reproduction du jeu classique avec gestion des collisions, déplacement des ennemis, tirs et score du joueur.</p>
-		<div class="tag">Python : Pyxel</div>
-	  </div>
-	</div>
+    <img src="photo.png" class="profile-pic" alt="Photo de profil">
+  </header>
 
-	<!-- Carte 6 -->
-	<div class="card">
-	  <h3>Jeu de la vie</h3>
-	  <p>Implémentation du modèle cellulaire.</p>
-	  <div class="toggle-arrow" onclick="toggleProject('p6')">▼</div>
-	  <div id="p6" class="project-details">
-		<p>Simulation du modèle cellulaire de Conway, gestion de l’évolution des cellules et visualisation interactive.</p>
-		<div class="tag">Python : Pygame</div>
-	  </div>
-	</div>
+  <!-- FORMATION -->
+  <section id="formation">
+    <h2 data-en="Education">Formation</h2>
 
-	<!-- Carte 7 -->
-	<div class="card">
-	  <h3><a style="color:#000000;" href="https://github.com/ChloeGREFFIER/projet_S102_dev">Jeu 2D</a></h3>
-	  <p>Projet simple en C++ basé sur un énoncé.</p>
-	  <div class="toggle-arrow" onclick="toggleProject('p7')">▼</div>
-	  <div id="p7" class="project-details">
-		<p>Implementation du jeu avec Personnage déplaçable, collecte de pièces, gestion des vies, déplacements automatiques des ennemis et interaction avec le joueur.</p>
-		<div class="tag">C++</div>
-	  </div>
-	</div>
+    <div class="grid">
+      <div class="card">
+        <p data-en="<b>Bachelor's Degree in Computer Science – IUT d'Orsay</b><br>Since September 2025<br><b>Specialization: </b> Application Development (design, architecture, development, testing and deployment)">
+          <b>BUT Informatique – IUT d’Orsay</b><br>Depuis septembre 2025<br><b>Parcours : </b> Réalisation d'Applications (conception, architecture, développement, tests et déploiement)
+        </p>
+      </div>
 
-	<!-- Carte 9 -->
-	<div class="card">
-	  <h3>Developpement d'application</h3>
-	  <p>application pour le suivi et l’organisation de médias.</p>
-	  <div class="toggle-arrow" onclick="toggleProject('p9')">▼</div>
-	  <div id="p9" class="project-details">
-		<p>Conception et développement, en équipe de 4, d’une application de gestion complète de médias en Java orienté objet avec Java Swing. L’application permet de créer et gérer des listes, suivre des utilisateurs, et ajouter, modifier ou supprimer du contenu via une interface graphique entièrement fonctionnelle</p>
-		<div class="tag">Java : Swing</div>
-		<div class="tag">Notions en Git et IHM</div>
-	  </div>
-	</div>
+      <div class="card">
+        <p data-en="<b>General Baccalaureate – Lycée de la Vallée de Chevreuse</b><br>2022 - 2025<br>With Honours<br><b>Specializations:</b> Mathematics and Computer Science">
+          <b>Baccalauréat général – Lycée de la Vallée de Chevreuse</b><br>2022 - 2025<br>Mention Bien<br><b>Spécialités :</b> Mathématiques et NSI
+        </p>
+      </div>
+    </div>
+  </section>
 
-	<!-- Carte 10 -->
-	<div class="card">
-	  <h3><a style="color:#000000;" href="https://github.com/ChloeGREFFIER/S104-BaseDeDonnee-Entreprise-">Bases de données - Oracle</a></h3>
-	  <p>Création et gestion d'une base de donnée pour une entreprise après étude des besoins.</p>
-	  <div class="toggle-arrow" onclick="toggleProject('p10')">▼</div>
-	  <div id="p10" class="project-details">
-		<p>Conception complète de la base de données, création des tables, relations et gestion des requêtes pour l’entreprise.</p>
-		<div class="tag">Oracle, SQL</div>
-	  </div>
-	</div>
+  <!-- COMPETENCES -->
+  <section id="competences">
+    <h2 data-en="Skills">Compétences</h2>
 
-	</div>
+    <div class="grid">
+      <div class="card">
+        <h3 data-en="Web Development">Web</h3>
+        <ul class="skill">
+          <li>HTML ★★★★★</li>
+          <li>CSS ★★★★★</li>
+          <li>JavaScript ★☆☆☆☆</li>
+          <li>PHP ★★★★☆</li>
+        </ul>
+      </div>
 
-	<script>
-	function toggleProject(id){
-	  const el = document.getElementById(id);
-	  el.style.display = (el.style.display === "block") ? "none" : "block";
-	  
-	  const arrow = el.previousElementSibling; // la flèche est juste avant le div details
-	  if(el.style.display === "block"){
-		arrow.style.transform = "rotate(180deg)";
-	  } else {
-		arrow.style.transform = "rotate(0deg)";
-	  }
-	}
-	</script>
-	
-	<section id="projets-perso">
-	<h2>Projets Personnels</h2>
-	<div class="grid">
-	
-	<!-- Carte 3 -->
-	<div class="card">
-	  <h3 style="color:#ff4da6;">★ Nuit du Code 2025</h3>
-	  <p>Concour collaboratif de création de jeu en groupe de 4.</p>
-	  <div class="toggle-arrow" onclick="toggleProject('p3')">▼</div>
-	  <div id="p3" class="project-details">
-		<p>marathon de programmation où, en équipe, nous avons conçu et développé un jeu vidéo complet autour d’un thème imposé, en alliant créativité, collaboration et apprentissage du code.</p>
-		<div class="tag">Python : Pyxel</div>
-	  </div>
-	</div>
-	
-	<!-- Carte 8 -->
-	<div class="card">
-	  <h3 style="color:#ff4da6;"><a style="color:#ff4da6;" href="https://astral-panda.itch.io/the-amazing-adventure-of-ubuntu-cheval-click-edition">★ Code Game Jam 2026</a></h3>
-	  <p>Participation à la Game Jam avec création de jeu en équipe de 5.</p>
-	  <div class="toggle-arrow" onclick="toggleProject('p8')">▼</div>
-	  <div id="p8" class="project-details">
-		<p>Lors de la Code Game Jam, j’ai participé à la création d’un jeu 2D en équipe, intégrant un personnage contrôlable et des mécaniques interactives. En plus du codage, je me suis occupé de la conception des assets graphiques du jeu, en optimisant le temps malgré les contrainte 30h maximum
-		<div class="tag">Godot, git, C++</div>
-	  </div>
-	</div>
-	
-	<!-- Carte 5 -->
-	<div class="card">
-	  <h3>Pac-Man</h3>
-	  <p>Projet dans le cadre du grand oral sur l'utilisation d'algorithmes de pathfinding.</p>
-	  <div class="toggle-arrow" onclick="toggleProject('p5')">▼</div>
-	  <div id="p5" class="project-details">
-		<p>Reproduction de Pac-Man avec implémentation d’algorithmes de pathfinding pour les fantômes et gestion du scoring.</p>
-		<div class="tag">Python : Pyxel</div>
-	  </div>
-	</div>
-	
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
+      <div class="card">
+        <h3 data-en="Programming Languages">Langages</h3>
+        <ul class="skill">
+          <li>Python (pygame, pyxel) ★★★★★</li>
+          <li>C++ ★★★★★</li>
+          <li>C# ★★★★☆</li>
+          <li>C ★★★★★</li>
+          <li>Java (swing) ★★★★★</li>
+          <li>Godot ★★☆☆☆</li>
+        </ul>
+      </div>
 
+      <div class="card">
+        <h3 data-en="Databases">Base de données</h3>
+        <ul class="skill">
+          <li>MySQL ★★★★★</li>
+          <li>Oracle ★★★★★</li>
+        </ul>
+      </div>
 
-	<!-- Début des sections supplémentaires après projets -->
+      <div class="card">
+        <h3 data-en="Tools">Outils</h3>
+        <ul class="skill">
+          <li>Linux ★★★☆☆</li>
+          <li>Git ★★★★★</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-	<section id="photos">
-		<h2>Mes Activitées et motivations</h2>
-		<div class="photo"> 
-		<div class="card"><h3>En dehors de l’informatique, je suis passionnée par :</h3><ul class="skill">
-			<li><b>Musique :</b> guitare, chant</li>
-			<li><b>Dessin :</b> crayon, feutre à alcool, charadesign, styles variés cartoon/manga  </li>
-			<li><b>Photographie :</b> paysages, quotidien</li>
-			<li><b>Jeux vidéo :</b> indé, horreur, coop</li>
-		</ul></div>
-		  <p>Voici quelques exemples de mon travail en dessin et en photographie :</p>
-	  </div>
+  <!-- ACADEMIC PROJECTS -->
+  <section id="projets">
+    <h2 data-en="Academic Projects">Projets dans le cadre du lycée ou de l'IUT</h2>
 
-	  <div class="photo-gallery">
-		<div class="slide-track">
-		  <img src="1.png" alt="page 1">
-		  <img src="2.png" alt="page 2">
-		  <img src="3.png" alt="page 3">
-		  <img src="4.png" alt="page 4">
-		  <img src="5.png" alt="page 5">
-		  <img src="6.png" alt="page 6">
-		  <img src="7.png" alt="page 7">
-		  <img src="8.png" alt="page 8">
+    <div class="grid">
 
-		  <!-- Répétition pour défilement infini -->
-		  <img src="1.png" alt="page 1">
-		  <img src="2.png" alt="page 2">
-		  <img src="3.png" alt="page 3">
-		  <img src="4.png" alt="page 4">
-		  <img src="5.png" alt="page 5">
-		  <img src="6.png" alt="page 6">
-		  <img src="7.png" alt="page 7">
-		  <img src="8.png" alt="page 8">
-		</div>
-	  </div>
-	</section>
+      <!-- Project 1 -->
+      <div class="card">
+        <h3>
+          <a style="color:#000000;" href="https://github.com/ChloeGREFFIER/CheapKiriTourism" data-en="Travel Agency Website">Site agence de voyage</a>
+        </h3>
 
-	<section id="qualites">
-	  <h2>Qualités / Soft Skills et Langues</h2>
-	  <div class="grid">
-		<div class="card"><h3>Soft Skills</h3><ul class="skill">
-			<li>Travail en équipe </li>
-			<li>Curiosité</li>
-			<li>Gestion du temps et organisation</li>
-			<li>Autonomie</li>
-			<li>Créativité</li>
-		</ul></div>
-		<div class="card"><h3>Langues</h3><ul class="skill">
-			<li>Français : Langue maternelle</li>
-			<li>Anglais : Bilingue (C2)</li>
-		</ul></div>
-	  </div>
-	</section>
+        <p data-en="Group project with 3 students: creating a fictional travel agency and developing its website.">
+          Projet en groupe de 3 : création d’une agence fictive puis développement du site web.
+        </p>
 
-	<section id="contact">
-	  <h2>Contact</h2>
-	  <div class="grid">
-		<div class="card">
-		  <p><b>Localisation :</b> Bures-sur-Yvette (91440) / Paris (75013) </p>
-		  <p><b>Téléphone :</b> 07 62 63 51 10</p>
-		  <p><b>Email :</b> <a href="mailto:chloe.greffier@universite-paris-saclay.fr">chloe.greffier@universite-paris-saclay.fr</a></p>
-		  <p><b>Email :</b> <a href="mailto:chloe_greffier@outlook.com">chloe_greffier@outlook.com</a></p>
-		</div>
-		<div class="card">
-		  <p><b>LinkedIn :</b> <a href="https://www.linkedin.com/in/chloegreffier">Profil LinkedIn</a></p>
-		  <p><b>GitHub :</b> <a href="https://github.com/ChloeGREFFIER">Mon GitHub</a></p>
-		  <p><b>CV :</b> <a href="CV_Chloe_GREFFIER.pdf" download>Télécharger mon CV</a></p>
-		</div>
-	  </div>
-	</section>
+        <div class="toggle-arrow" onclick="toggleProject('p1')">▼</div>
 
-	<footer> 2026 - Chloé Greffier - Universite Paris Saclay </footer>
+        <div id="p1" class="project-details">
+          <p data-en="Travel agency website project: complete front-end development, responsive integration, and management of pages and dynamic content.">
+            Explication projet Site agence de voyage : réalisation complète du front-end, intégration responsive, gestion des pages et contenus dynamiques.
+          </p>
+          <div class="tag">HTML, CSS</div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="card">
+        <h3 data-en="Children's Game">Jeu enfant</h3>
+
+        <p data-en="Mental arithmetic game with an ocean theme, developed in a group of 3.">
+          Jeu de calcul mental sur le thème de la mer en groupe de 3.
+        </p>
+
+        <div class="toggle-arrow" onclick="toggleProject('p2')">▼</div>
+
+        <div id="p2" class="project-details">
+          <p data-en="Children's game project: development of a playful interface, score management, timers and simple animations to support mathematics learning.">
+            Explication projet Jeu enfant : développement du jeu avec interface ludique, gestion des scores, timers et animations simples pour l’apprentissage des mathématiques.
+          </p>
+          <div class="tag">HTML, CSS, JS</div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="card">
+        <h3>Space Invaders</h3>
+
+        <p data-en="Recreation of the game in a team of 2.">
+          Recréation du jeu en groupe de 2.
+        </p>
+
+        <div class="toggle-arrow" onclick="toggleProject('p4')">▼</div>
+
+        <div id="p4" class="project-details">
+          <p data-en="Recreation of the classic game, including collision detection, enemy movement, shooting and player score management.">
+            Reproduction du jeu classique avec gestion des collisions, déplacement des ennemis, tirs et score du joueur.
+          </p>
+          <div class="tag">Python : Pyxel</div>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="card">
+        <h3 data-en="Game of Life">Jeu de la vie</h3>
+
+        <p data-en="Implementation of the cellular automaton model.">
+          Implémentation du modèle cellulaire.
+        </p>
+
+        <div class="toggle-arrow" onclick="toggleProject('p6')">▼</div>
+
+        <div id="p6" class="project-details">
+          <p data-en="Simulation of Conway's cellular automaton, including cell evolution and interactive visualization.">
+            Simulation du modèle cellulaire de Conway, gestion de l’évolution des cellules et visualisation interactive.
+          </p>
+          <div class="tag">Python : Pygame</div>
+        </div>
+      </div>
+
+      <!-- Project 7 -->
+      <div class="card">
+        <h3>
+          <a style="color:#000000;" href="https://github.com/ChloeGREFFIER/projet_S102_dev" data-en="2D Game">Jeu 2D</a>
+        </h3>
+
+        <p data-en="Simple C++ project based on a specification.">
+          Projet simple en C++ basé sur un énoncé.
+        </p>
+
+        <div class="toggle-arrow" onclick="toggleProject('p7')">▼</div>
+
+        <div id="p7" class="project-details">
+          <p data-en="Implementation of a game featuring a movable character, coin collection, lives management, automatic enemy movement and player interaction.">
+            Implementation du jeu avec Personnage déplaçable, collecte de pièces, gestion des vies, déplacements automatiques des ennemis et interaction avec le joueur.
+          </p>
+          <div class="tag">C++</div>
+        </div>
+      </div>
+
+      <!-- Project 9 -->
+      <div class="card">
+        <h3 data-en="Application Development">Developpement d'application</h3>
+
+        <p data-en="Application for tracking and organizing media.">
+          application pour le suivi et l’organisation de médias.
+        </p>
+
+        <div class="toggle-arrow" onclick="toggleProject('p9')">▼</div>
+
+        <div id="p9" class="project-details">
+          <p data-en="Design and development, in a team of 4, of a complete media management application using object-oriented Java and Java Swing. The application allows users to create and manage lists, track users, and add, edit or delete content through a fully functional graphical interface.">
+            Conception et développement, en équipe de 4, d’une application de gestion complète de médias en Java orienté objet avec Java Swing. L’application permet de créer et gérer des listes, suivre des utilisateurs, et ajouter, modifier ou supprimer du contenu via une interface graphique entièrement fonctionnelle
+          </p>
+          <div class="tag">Java : Swing</div>
+          <div class="tag" data-en="Git and GUI fundamentals">Notions en Git et IHM</div>
+        </div>
+      </div>
+
+      <!-- Project 10 -->
+      <div class="card">
+        <h3>
+          <a style="color:#000000;" href="https://github.com/ChloeGREFFIER/S104-BaseDeDonnee-Entreprise-" data-en="Databases - Oracle">Bases de données - Oracle</a>
+        </h3>
+
+        <p data-en="Creation and management of a company's database following a requirements analysis.">
+          Création et gestion d'une base de donnée pour une entreprise après étude des besoins.
+        </p>
+
+        <div class="toggle-arrow" onclick="toggleProject('p10')">▼</div>
+
+        <div id="p10" class="project-details">
+          <p data-en="Complete database design, table and relationship creation, and management of queries for the company.">
+            Conception complète de la base de données, création des tables, relations et gestion des requêtes pour l’entreprise.
+          </p>
+          <div class="tag">Oracle, SQL</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PERSONAL PROJECTS -->
+  <section id="projets-perso">
+    <h2 data-en="Personal Projects">Projets Personnels</h2>
+
+    <div class="grid">
+
+      <!-- Project 3 -->
+      <div class="card">
+        <h3 style="color:#ff4da6;" data-en="★ Nuit du Code 2025">★ Nuit du Code 2025</h3>
+
+        <p data-en="Collaborative game development competition in a team of 4.">
+          Concour collaboratif de création de jeu en groupe de 4.
+        </p>
+
+        <div class="toggle-arrow" onclick="toggleProject('p3')">▼</div>
+
+        <div id="p3" class="project-details">
+          <p data-en="A programming marathon in which our team designed and developed a complete video game around a given theme, combining creativity, collaboration and learning to code.">
+            marathon de programmation où, en équipe, nous avons conçu et développé un jeu vidéo complet autour d’un thème imposé, en alliant créativité, collaboration et apprentissage du code.
+          </p>
+          <div class="tag">Python : Pyxel</div>
+        </div>
+      </div>
+
+      <!-- Project 8 -->
+      <div class="card">
+        <h3 style="color:#ff4da6;">
+          <a style="color:#ff4da6;" href="https://astral-panda.itch.io/the-amazing-adventure-of-ubuntu-cheval-click-edition" data-en="★ Code Game Jam 2026">★ Code Game Jam 2026</a>
+        </h3>
+
+        <p data-en="Participated in a Game Jam, creating a game in a team of 5.">
+          Participation à la Game Jam avec création de jeu en équipe de 5.
+        </p>
+
+        <div class="toggle-arrow" onclick="toggleProject('p8')">▼</div>
+
+        <div id="p8" class="project-details">
+          <p data-en="During the Code Game Jam, I helped create a 2D game in a team, including a controllable character and interactive mechanics. I also designed the game's graphical assets while working within the 30-hour time limit.">
+            Lors de la Code Game Jam, j’ai participé à la création d’un jeu 2D en équipe, intégrant un personnage contrôlable et des mécaniques interactives. En plus du codage, je me suis occupé de la conception des assets graphiques du jeu, en optimisant le temps malgré les contrainte 30h maximum
+          </p>
+          <div class="tag">Godot, git, C++</div>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="card">
+        <h3>Pac-Man</h3>
+
+        <p data-en="High school final oral project on the use of pathfinding algorithms.">
+          Projet dans le cadre du grand oral sur l'utilisation d'algorithmes de pathfinding.
+        </p>
+
+        <div class="toggle-arrow" onclick="toggleProject('p5')">▼</div>
+
+        <div id="p5" class="project-details">
+          <p data-en="Recreation of Pac-Man, implementing pathfinding algorithms for ghosts and score management.">
+            Reproduction de Pac-Man avec implémentation d’algorithmes de pathfinding pour les fantômes et gestion du scoring.
+          </p>
+          <div class="tag">Python : Pyxel</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ACTIVITIES AND PHOTOS -->
+  <section id="photos">
+    <h2 data-en="My Interests and Motivations">Mes Activitées et motivations</h2>
+
+    <div class="photo">
+      <div class="card">
+        <h3 data-en="Outside of computer science, I am passionate about:">
+          En dehors de l’informatique, je suis passionnée par :
+        </h3>
+
+        <ul class="skill">
+          <li data-en="<b>Music:</b> guitar, singing"><b>Musique :</b> guitare, chant</li>
+          <li data-en="<b>Drawing:</b> pencil, alcohol markers, character design, various cartoon/manga styles"><b>Dessin :</b> crayon, feutre à alcool, charadesign, styles variés cartoon/manga</li>
+          <li data-en="<b>Photography:</b> landscapes, everyday life"><b>Photographie :</b> paysages, quotidien</li>
+          <li data-en="<b>Video games:</b> indie, horror, co-op"><b>Jeux vidéo :</b> indé, horreur, coop</li>
+        </ul>
+      </div>
+
+      <p data-en="Here are some examples of my drawing and photography work:">
+        Voici quelques exemples de mon travail en dessin et en photographie :
+      </p>
+    </div>
+
+    <div class="photo-gallery">
+      <div class="slide-track">
+        <img src="1.png" alt="page 1">
+        <img src="2.png" alt="page 2">
+        <img src="3.png" alt="page 3">
+        <img src="4.png" alt="page 4">
+        <img src="5.png" alt="page 5">
+        <img src="6.png" alt="page 6">
+        <img src="7.png" alt="page 7">
+        <img src="8.png" alt="page 8">
+
+        <!-- Repetition for infinite scrolling -->
+        <img src="1.png" alt="page 1">
+        <img src="2.png" alt="page 2">
+        <img src="3.png" alt="page 3">
+        <img src="4.png" alt="page 4">
+        <img src="5.png" alt="page 5">
+        <img src="6.png" alt="page 6">
+        <img src="7.png" alt="page 7">
+        <img src="8.png" alt="page 8">
+      </div>
+    </div>
+  </section>
+
+  <!-- SOFT SKILLS AND LANGUAGES -->
+  <section id="qualites">
+    <h2 data-en="Soft Skills and Languages">Qualités / Soft Skills et Langues</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3 data-en="Soft Skills">Soft Skills</h3>
+        <ul class="skill">
+          <li data-en="Teamwork">Travail en équipe</li>
+          <li data-en="Curiosity">Curiosité</li>
+          <li data-en="Time management and organization">Gestion du temps et organisation</li>
+          <li data-en="Independence">Autonomie</li>
+          <li data-en="Creativity">Créativité</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 data-en="Languages">Langues</h3>
+        <ul class="skill">
+          <li data-en="French: Native">Français : Langue maternelle</li>
+          <li data-en="English: Bilingual (C2)">Anglais : Bilingue (C2)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+
+    <div class="grid">
+      <div class="card">
+        <p data-en="<b>Location:</b> Bures-sur-Yvette (91440) / Paris (75013)">
+          <b>Localisation :</b> Bures-sur-Yvette (91440) / Paris (75013)
+        </p>
+
+        <p data-en="<b>Phone:</b> 07 62 63 51 10">
+          <b>Téléphone :</b> 07 62 63 51 10
+        </p>
+
+        <p data-en='<b>Email:</b> <a href="mailto:chloe.greffier@universite-paris-saclay.fr">chloe.greffier@universite-paris-saclay.fr</a>'>
+          <b>Email :</b> <a href="mailto:chloe.greffier@universite-paris-saclay.fr">chloe.greffier@universite-paris-saclay.fr</a>
+        </p>
+
+        <p data-en='<b>Email:</b> <a href="mailto:chloe_greffier@outlook.com">chloe_greffier@outlook.com</a>'>
+          <b>Email :</b> <a href="mailto:chloe_greffier@outlook.com">chloe_greffier@outlook.com</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <p data-en='<b>LinkedIn:</b> <a href="https://www.linkedin.com/in/chloegreffier">LinkedIn Profile</a>'>
+          <b>LinkedIn :</b> <a href="https://www.linkedin.com/in/chloegreffier">Profil LinkedIn</a>
+        </p>
+
+        <p data-en='<b>GitHub:</b> <a href="https://github.com/ChloeGREFFIER">My GitHub</a>'>
+          <b>GitHub :</b> <a href="https://github.com/ChloeGREFFIER">Mon GitHub</a>
+        </p>
+
+        <p data-en='<b>Resume:</b> <a href="CV_Chloe_GREFFIER.pdf" download>Download my resume</a>'>
+          <b>CV :</b> <a href="CV_Chloe_GREFFIER.pdf" download>Télécharger mon CV</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer data-en="2026 - Chloé Greffier - Université Paris-Saclay">
+    2026 - Chloé Greffier - Universite Paris Saclay
+  </footer>
+
+  <!-- PROJECT DROPDOWNS AND LANGUAGE SWITCH -->
+  <script>
+    function toggleProject(id) {
+      const el = document.getElementById(id);
+      el.style.display = (el.style.display === "block") ? "none" : "block";
+
+      const arrow = el.previousElementSibling;
+
+      if (el.style.display === "block") {
+        arrow.style.transform = "rotate(180deg)";
+      } else {
+        arrow.style.transform = "rotate(0deg)";
+      }
+    }
+
+    const languageSwitch = document.getElementById("language-switch");
+    const frenchOption = document.getElementById("lang-fr");
+    const englishOption = document.getElementById("lang-en");
+
+    // Save the original French HTML exactly as it appears on the page.
+    const frenchContent = new Map();
+
+    document.querySelectorAll("[data-en]").forEach((element) => {
+      frenchContent.set(element, element.innerHTML);
+    });
+
+    function setLanguage(language) {
+      document.documentElement.lang = language;
+
+      document.querySelectorAll("[data-en]").forEach((element) => {
+        if (language === "en") {
+          element.innerHTML = element.dataset.en;
+        } else {
+          element.innerHTML = frenchContent.get(element);
+        }
+      });
+
+      frenchOption.classList.toggle("active", language === "fr");
+      englishOption.classList.toggle("active", language === "en");
+
+      languageSwitch.setAttribute(
+        "aria-pressed",
+        language === "en" ? "true" : "false"
+      );
+
+      languageSwitch.setAttribute(
+        "aria-label",
+        language === "fr" ? "Switch to English" : "Passer en français"
+      );
+    }
+
+    languageSwitch.addEventListener("click", () => {
+      const currentLanguage = document.documentElement.lang;
+      setLanguage(currentLanguage === "fr" ? "en" : "fr");
+    });
+
+    // French is the default language.
+    setLanguage("fr");
+  </script>
 
 </body>
 </html>
